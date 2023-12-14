@@ -1,0 +1,16 @@
+#lang racket
+(require json)
+
+(define (cat-nested a-cat a-json) (map (lambda (an-entry) (hash-ref an-entry a-cat)) a-json))
+(define (file->json a-file) (read-json (open-input-file a-file)))
+(define (read-cat a-cat a-file) (hash-ref (file->json a-file) a-cat))
+(define (random-elt a-list) (list-ref a-list (random (length a-list))))
+(define harvard-sentences 
+  (read-cat 'data "harvard_sentences.json"))
+(define burroughs-instructions (cat-nested 'instruction
+                                    (read-cat 'burroughsinstructionset "burroughsinstructionset.json")))
+(define fragments (file->lines "fragments.txt"))
+(define containers (read-cat 'containers "containers.json"))
+(define (say-something) (string-append (random-elt burroughs-instructions) ": " (string-downcase(random-elt harvard-sentences))))
+(map (lambda (_) (say-something)) (range 10))
+  
