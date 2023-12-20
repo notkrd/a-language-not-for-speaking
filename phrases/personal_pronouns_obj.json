@@ -1,0 +1,36 @@
+[{
+	"word": "me",
+	"people": "f",
+	"gender": "",
+	"number": "s"
+},{
+	"word": "us",
+	"people": "f",
+	"gender": "",
+	"number": "p"
+},{
+	"word": "you",
+	"people": "s",
+	"gender": "",
+	"number": ""
+},{
+	"word": "her",
+	"people": "t",
+	"gender": "f",
+	"number": "s"
+},{
+	"word": "him",
+	"people": "t",
+	"gender": "m",
+	"number": "s"
+},{
+	"word": "it",
+	"people": "t",
+	"gender": "",
+	"number": "s"
+},{
+	"word": "them",
+	"people": "t",
+	"gender": "",
+	"number": "p"
+}]

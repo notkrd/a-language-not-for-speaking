@@ -1,0 +1,41 @@
+[{
+	"word": "I",
+	"people": "f",
+	"gender": "",
+	"number": "s"
+},{
+	"word": "we",
+	"people": "f",
+	"gender": "",
+	"number": "p"
+},{
+	"word": "you",
+	"people": "s",
+	"gender": "",
+	"number": ""
+},{
+	"word": "she",
+	"people": "t",
+	"gender": "f",
+	"number": "s"
+},{
+	"word": "he",
+	"people": "t",
+	"gender": "m",
+	"number": "s"
+},{
+	"word": "it",
+	"people": "t",
+	"gender": "",
+	"number": "s"
+},{
+	"word": "they",
+	"people": "t",
+	"gender": "",
+	"number": "p"
+},{
+	"word": "ze",
+	"people": "t",
+	"gender": "",
+	"number": "s"
+}]
