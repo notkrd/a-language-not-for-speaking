@@ -38,4 +38,44 @@
 	"people": "t",
 	"gender": "",
 	"number": "s"
+},{
+	"word": "someone",
+	"people": "t",
+	"gender": "",
+	"number": "s"
+},{
+	"word": "nobody",
+	"people": "t",
+	"gender": "",
+	"number": "p"
+},{
+	"word": "everyone",
+	"people": "t",
+	"gender": "",
+	"number": "p"
+},{
+	"word": "something",
+	"people": "t",
+	"gender": "",
+	"number": "s"
+},{
+	"word": "nothing",
+	"people": "t",
+	"gender": "",
+	"number": "s"
+},{
+	"word": "something",
+	"people": "t",
+	"gender": "",
+	"number": "s"
+},{
+	"word": "both",
+	"people": "t",
+	"gender": "",
+	"number": "p"
+},{
+	"word": "others",
+	"people": "t",
+	"gender": "",
+	"number": "p"
 }]

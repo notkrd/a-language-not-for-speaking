@@ -48,7 +48,7 @@
 (define interjections (read-cat 'interjections "phrases/interjections.json"))
 (define personal-pronouns-subj (flatten (map (lambda (h) (hash-ref h 'word)) (file->json "phrases/personal_pronouns_subj.json"))))
 (define personal-pronouns-obj (flatten (map (lambda (h) (hash-ref h 'word)) (file->json "phrases/personal_pronouns_obj.json"))))
-(define determiners (list "a" "the" "that" "this" "one" "some" "each" "neither" "little" "much" "their" "his" "her" "zir" "your" "its"))
+(define determiners (list "a" "the" "that" "this" "one" "the first" "the other" "the list" "some" "each" "neither" "little" "much" "their" "his" "her" "zir" "your" "its"))
 (define past-verbs (map (lambda (entry) (hash-ref entry 'past)) (read-cat 'verbs "phrases/verbs.json")))
 (define infinitives (file->json "phrases/infinitive_verbs.json"))
 (define environmental-hazards (read-cat 'entries "phrases/environmental_hazards.json"))
@@ -173,7 +173,7 @@
 (define (? a-sent) (display (handle-text a-sent)))
 
 (define (read-word a-sent a-lexicon original [loops 0])
-  (if (or (equal? (length a-sent) 0) (>= loops 280))
+  (if (or (equal? (length a-sent) 0) (>= loops 99))
       (say-sentence a-lexicon)
       (let ([a-word (first a-sent)])
         (cond
@@ -212,9 +212,10 @@
              [(member (last (string->list a-word)) vowels)
               (read-word
                (rest a-sent)
-               (increment-word a-lexicon -1)
-               original)]
-             [else (read-word (rest a-sent) a-lexicon original)])]
+               (say-active-word (increment-word a-lexicon -1))
+               original
+               loops)]
+             [else (read-word (rest a-sent) a-lexicon original loops)])]
           [(equal? (modulo (string-length a-word) 2) 1)
            (cond
              [(member (first (string->list a-word)) consonants)
@@ -226,7 +227,7 @@
              [(member (first (string->list a-word)) vowels)
               (read-word
                (rest a-sent)
-               (shift-list a-lexicon -1)
+               (say-active-word (shift-list a-lexicon -1))
                original
                loops)]
              [else (read-word
