@@ -13,7 +13,7 @@ An esoteric programming language used to create the dialogue "These Words, an Ex
 
 ## Language specification
 
-The language is based on "brainfuck" - one of the smallest possible ways of describing a Universal Turing Machine. Statements in the form (? "...") are executed with the output following. Here is a rough summary of the rules of the language interpreter:
+The language is based on "brainfuck" - one of the smallest possible ways of describing a Universal Turing Machine. Statements in the form (? "...") are executed with the output following. Some more information about esoteric programming languages can be found on this excellent blog / archive by Daniel Temking [esoteric.codes](https://esoteric.codes) or this fascinating article by Brandee Easter [“Feminist_brevity_in_light_of_masculine_long-windedness” code, space, and online misogyny](https://doi.org/10.1080/14680777.2018.1447335). Here is a rough summary of the rules of the language interpreter:
 
 Data is stored, rather than in bytes, as positions in a list of alphabetized wordlists (subject pronouns, adverbs, verbs, determiners, adjectives, and nouns). There is a pointer that identifies one of the wordlists as active, always initially pointed to the list of adjectives. Each time the language is initiated, the starting point (the "zero") in each list is randomized but kept consistent across that interaction. When a phrase is generated grammatically, it uses the current status of the relevant wordlist. The interpreter prints the state of its memory, as a sentence, at the beginning and end of the exchange. This could be translated back into arbitrary numeric data.
 
